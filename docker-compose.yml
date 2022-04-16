@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  feelapp:
+    image: feelapp/odoo:12.0
+    container_name: feelapp-prod
+#    ports:
+#     - 8070:8070
+    networks:
+      portainer_default:
+        aliases:
+          - feelapp
+    volumes:
+      - odoo-web-data
+      - ./log:/opt/odoo/log
+      - ./config:/opt/odoo/config
+      - /home/feelapp/addons/12.0:/opt/odoo/extra-addons
+      - /home/feelapp/backup/feelapp/filestore:/opt/odoo/data
+      - /home/feelapp/location/12.0:/opt/odoo/location
+      - /home/feelapp/enterprise/12.0:/opt/odoo/enterprise
+volumes:
+  odoo-web-data:
+networks:
+    portainer_default:
+            external: true
+            name: portainer_default

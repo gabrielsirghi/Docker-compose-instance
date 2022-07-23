@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   feelapp:
-    image: feelapp/odoo:12.0
+    image: feelapp/odoo:15.0
     container_name: feelapp-prod
 #    ports:
 #     - 8070:8070

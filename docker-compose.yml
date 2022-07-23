@@ -10,15 +10,13 @@ services:
         aliases:
           - feelapp
     volumes:
-      - odoo-web-data
       - ./log:/opt/odoo/log
       - ./config:/opt/odoo/config
-      - /home/feelapp/addons/12.0:/opt/odoo/extra-addons
-      - /home/feelapp/backup/feelapp/filestore:/opt/odoo/data
-      - /home/feelapp/location/12.0:/opt/odoo/location
-      - /home/feelapp/enterprise/12.0:/opt/odoo/enterprise
-volumes:
-  odoo-web-data:
+      - /home/feelapp/addons/:/opt/odoo/extra-addons
+      - /home/feelapp/backup/:/opt/odoo/data
+      - /home/feelapp/location/:/opt/odoo/location
+      - /home/feelapp/enterprise/:/opt/odoo/enterprise
+      - /home/feelapp/themes/:/opt/odoo/themes
 networks:
     portainer_default:
             external: true

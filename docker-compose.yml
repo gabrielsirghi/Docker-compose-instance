@@ -3,6 +3,7 @@ services:
   feelapp:
     image: feelapp/odoo:15.0
     container_name: feelapp-prod
+    restart: always
 #    ports:
 #     - 8070:8070
     networks:
@@ -13,7 +14,7 @@ services:
       - ./log:/opt/odoo/log
       - ./config:/opt/odoo/config
       - /home/feelapp/addons/:/opt/odoo/extra-addons
-      - /home/feelapp/backup/:/opt/odoo/data
+      - /home/feelapp/filestore/:/opt/odoo/data
       - /home/feelapp/location/:/opt/odoo/location
       - /home/feelapp/enterprise/:/opt/odoo/enterprise
       - /home/feelapp/themes/:/opt/odoo/themes

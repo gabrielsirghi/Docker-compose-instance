@@ -5,7 +5,7 @@ services:
     container_name: feelapp-prod
     restart: always
 #    ports:
-#     - 8070:8070
+#     - 8069:8069
     networks:
       portainer_default:
         aliases:
@@ -18,6 +18,7 @@ services:
       - /home/feelapp/location/:/opt/odoo/location
       - /home/feelapp/enterprise/:/opt/odoo/enterprise
       - /home/feelapp/themes/:/opt/odoo/themes
+      - /home/feelapp/google/:/opt/odoo/google/drive
 networks:
     portainer_default:
             external: true

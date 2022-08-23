@@ -4,8 +4,8 @@ services:
     image: feelapp/odoo:15.0
     container_name: feelapp-prod
     restart: always
-#    ports:
-#     - 8069:8069
+    ports:
+     - 8069:8069
     networks:
       portainer_default:
         aliases:

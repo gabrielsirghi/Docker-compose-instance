@@ -21,8 +21,7 @@ services:
       - /home/feelapp/filestore/:/opt/odoo/data
       - /home/feelapp/location/:/opt/odoo/location
       - /home/feelapp/enterprise/:/opt/odoo/enterprise
-      - /home/feelapp/themes/:/opt/odoo/themes
-      - /home/feelapp/google/:/opt/odoo/google/drive
+      - /home/feelapp/google/:/opt/odoo/backup/google-drive
 networks:
     portainer_default:
             external: true

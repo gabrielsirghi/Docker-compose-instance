@@ -16,12 +16,12 @@ services:
          - feelapp
     volumes:
       - ./log:/opt/odoo/log
-      - ./config:/opt/odoo/config
-      - /home/feelapp/addons/:/opt/odoo/extra-addons
-      - /home/feelapp/filestore/:/opt/odoo/data
-      - /home/feelapp/location/:/opt/odoo/location
-      - /home/feelapp/enterprise/:/opt/odoo/enterprise
-      - /home/feelapp/google/:/opt/odoo/backup/google-drive
+      - ./config/:/opt/odoo/config/
+      - /opt/odoo/addons/:/opt/odoo/extra-addons
+      - /opt/odoo/filestore/:/opt/odoo/data
+      - /opt/odoo/location/:/opt/odoo/location
+      - /opt/odoo/enterprise/:/opt/odoo/enterprise
+      - /opt/odoo/backup/google/:/opt/odoo/backup/google-drive
 networks:
     portainer_default:
             external: true

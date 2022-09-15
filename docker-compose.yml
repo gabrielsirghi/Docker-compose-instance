@@ -16,7 +16,7 @@ services:
          - feelapp
     volumes:
       - ./log:/opt/odoo/log
-      - ./config/:/opt/odoo/config/
+      - ./config/odoo/:/opt/odoo/config/
       - /opt/odoo/addons/:/opt/odoo/extra-addons
       - /opt/odoo/filestore/:/opt/odoo/data
       - /opt/odoo/location/:/opt/odoo/location
@@ -25,5 +25,5 @@ services:
       - /opt/odoo/core/odoo:/opt/odoo/odoo
 networks:
     portainer_default:
-            external: true
+            external:
             name: portainer_default

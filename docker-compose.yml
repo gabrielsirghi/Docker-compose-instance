@@ -17,12 +17,12 @@ services:
     volumes:
       - ./log:/opt/odoo/log
       - ./config/odoo/:/opt/odoo/config/
-      - /Home/odoo/sre/odoo:/opt/odoo/odoo
-      - /Home/odoo/sre/addons/:/opt/odoo/extra-addons
-      - /Home/odoo/sre/enterprise/:/opt/odoo/enterprise
-      - /Home/odoo/sre/location/:/opt/odoo/location
-      - /Home/odoo/data/:/opt/odoo/data
-      - /Home/odoo/backup/google/:/opt/odoo/backup/google-drive
+      - /opt/odoo/sre/odoo:/opt/odoo/odoo
+      - /opt/odoo/sre/addons/:/opt/odoo/extra-addons
+      - /opt/odoo/sre/enterprise/:/opt/odoo/enterprise
+      - /opt/odoo/sre/location/:/opt/odoo/location
+      - /opt/odoo/data/:/opt/odoo/data
+      - /opt/odoo/backup/google/:/opt/odoo/backup/google-drive
 networks:
     portainer_default:
             external:

@@ -3,7 +3,7 @@ services:
   feelapp:
     image: feelapp/odoo:15.0
     container_name: feelapp-prod
-    restart: always
+    restart: unless-stopped
     environment:
      - TZ=America/Bogota
     ports:

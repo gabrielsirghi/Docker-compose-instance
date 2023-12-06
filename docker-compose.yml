@@ -1,28 +1,27 @@
 version: '3.9'
 services:
   feelapp:
-    image: feelapp/odoo:15.0
+    image: feelapp/odoo:17.0                 # Ejemplo del nombre de la imagen
     container_name: feelapp-prod
     restart: unless-stopped
     environment:
      - TZ=America/Bogota
     ports:
      - "8069:8069"
-     - "8071:8071"
      - "8072:8072"
     networks:
       portainer_default:
         aliases:
-         - feelapp
+         - feelapp                           # Ejemplo nombre de la red
     volumes:
-      - ./log:/opt/odoo/log
-      - ./config/odoo/:/opt/odoo/config/
-      - /opt/odoo/sre/odoo:/opt/odoo/odoo
-      - /opt/odoo/sre/addons/:/opt/odoo/extra-addons
-      - /opt/odoo/sre/enterprise/:/opt/odoo/enterprise
-      - /opt/odoo/sre/location/:/opt/odoo/location
+      - ./log:/opt/odoo/log                     # Directorio no presistente
+      - ./config/odoo/:/opt/odoo/config/        # Directorio no persistente
+      - /opt/odoo/odoo:/opt/odoo/odoo           
+      - /opt/odoo/addons/:/opt/odoo/extra-addons
+      - /opt/odoo/enterprise/:/opt/odoo/enterprise
+      - /opt/odoo/location/:/opt/odoo/location
       - /opt/odoo/data/:/opt/odoo/data
-      - /opt/odoo/backup/google/:/opt/odoo/backup/google-drive
+      - /opt/odoo/backup/:/opt/odoo/backup
 networks:
     portainer_default:
             external:
